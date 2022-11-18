@@ -25,12 +25,14 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 //connect to mongo database
 async function main() {
+  ////link to monogo database
   await mongoose.connect('mongodb+srv://admin:admin@cluster0.prho57d.mongodb.net/?retryWrites=true&w=majority');
   
   // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 
 //mongodb+srv://shaunamartyn1:<password>@cluster0.prho57d.mongodb.net/?retryWrites=true&w=majority
 }//
+//create a data model schema with mongoose
 const bookSchema = new mongoose.Schema({
   title: String,
   cover: String,
@@ -40,6 +42,7 @@ const bookSchema = new mongoose.Schema({
 //"Books" name of folder its being written to 
 const bookModel = mongoose.model('Books', bookSchema);
 
+//create get request - sends message hello world
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
