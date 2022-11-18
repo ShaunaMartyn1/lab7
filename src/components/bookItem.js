@@ -11,7 +11,7 @@ export class BookItem extends React.Component{
     <Card>
             <Card.Header >{this.props.book.title}</Card.Header>
       <Card.Body>
-      
+      //changed to cover 
         <img src = {this.props.book.cover}></img>
         <footer>
             {this.props.book.author}  
